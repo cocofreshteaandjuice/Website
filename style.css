@@ -1,0 +1,298 @@
+body {
+    margin: 0; /* เอา margin ของ body ออก */
+    padding-bottom: 50px; /* ทำให้เนื้อหาของหน้าไม่ไปทับ footer */
+    padding: 0;
+    height: 100vh; /* ทำให้ครอบคลุมทั้งหน้าจอ */
+    justify-content: flex-start; /* จัดตำแหน่งเนื้อหาภายในแนวนอนให้เริ่มที่ซ้าย */
+    background-color: #f0dfdf;
+    font-family: 'SofiaLight', 'Prompt', 'sans-serif';
+    align-items: center; /* จัดแนวในแนวตั้งให้ตรงกลาง */
+    background-image: url('./images/bg.jpg'); /* ใส่ URL ของรูปภาพ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: 'SofiaLight';
+    src: url('./font/Sofia_Pro_Soft_Light.ttf');
+    unicode-range: U+0000-007F; /* ฟอนต์นี้จะใช้กับภาษาอังกฤษ */
+}
+
+@font-face {
+    font-family: 'Prompt';
+    src: url('./Font/Prompt_Regular.ttf');
+    unicode-range: U+0E00-0E7F; /* ฟอนต์นี้จะใช้กับภาษาไทย */
+}
+
+.btn {
+    height: 50px;
+    width: 150px;
+}
+
+/* สไตล์ของ header */
+header {
+    width: auto;
+    background-color: #ff8300;
+    color: white;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex ;               /* ใช้ flexbox เพื่อจัดการตำแหน่ง */
+    justify-content: center;     /* จัดตำแหน่งเนื้อหาในแนวนอน */
+    align-items: center ;         /* จัดตำแหน่งเนื้อหาในแนวตั้ง */
+    padding: 0 15px;
+}
+
+.back-button {
+    background-color: transparent;  /* ให้ปุ่มไม่มีพื้นหลัง */
+    border: none;                   /* ไม่มีกรอบ */
+    color: white;                   /* ข้อความสีขาว */
+    font-size: 1.2em;               /* ขนาดตัวอักษร */
+    cursor: pointer;               /* แสดง cursor แบบปุ่ม */
+    padding: 10px 15px;             /* ระยะห่างในปุ่ม */
+    position: absolute;             /* ทำให้ปุ่มอยู่ในตำแหน่งที่กำหนด */
+    left: 15px;                     /* ปุ่มจะอยู่ทางซ้ายสุด */
+}
+
+
+.menu-container {
+    display: flex; /* ใช้ flexbox เพื่อจัดองค์ประกอบในแนวนอน */
+    gap: 20px; /* ระยะห่างระหว่างแต่ละรายการ */
+    justify-content: flex-end; /* จัดให้เมนูอยู่ทางขวา */
+    width: auto; /* ทำให้เมนูขยายเต็มหน้าจอ */
+  }
+  
+.menu-container h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255)fff;
+  }
+
+.menu-container a {
+    text-decoration: none; /* เอาเส้นขีดใต้ลิงค์ออก */
+    color: inherit; /* ใช้สีตัวอักษรจาก h2 */
+    
+}
+
+.logo-container img {
+    width: 200px; /* ขนาดโลโก้ */
+    height: auto;
+}
+.logo-container {
+    /* โดยปกติแล้ว div จะอยู่ทางซ้ายอยู่แล้ว */
+    margin-left: 0; /* กำหนดระยะห่างด้านซ้ายให้เป็น 0 */
+    margin-right: auto;
+  }
+
+header h1 {
+    margin: 0;
+    line-height: 1.5; /* ปรับระยะบรรทัดใน header */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* สไตล์ของ section intro */
+.intro {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    line-height: 1.4; /* ระยะบรรทัดของหัวข้อใน intro */
+}
+
+/* การจัดรูปแบบเมนู */
+.menu {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 15px;
+    text-align: center;
+    font-family: 'SofiaLight'; /* ตัวอย่างฟอนต์ */
+}
+
+.menu h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.menu-item {
+    display: inline-block;
+    flex-direction: column;          /* จัดเรียงเนื้อหาจากบนลงล่าง */
+    justify-content: space-between;  /* ให้เนื้อหาภายในมีระยะห่างที่เท่ากัน */
+    align-items: center;            /* จัดให้อยู่ตรงกลาง */
+    width:  400px;                   /* กำหนดความกว้างให้เหมาะสม */
+    height: 400px;                  /* กำหนดความสูงให้เท่ากัน */
+    margin: 15px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;         /* ทำให้ขนาดรวม padding, border */
+    text-align: center;             /* จัดข้อความให้อยู่กลาง */
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+.menu-image {
+    width: auto;                    /* กำหนดให้ภาพมีความกว้างเต็มกรอบ */
+    height: 240px;                  /* กำหนดความสูงของภาพ */
+    border-radius: 10px;
+    margin-right: 10px;             /* เพิ่มช่องว่างระหว่างรูปและข้อความ
+    object-fit: cover;              /* ให้ภาพครอบคลุมพื้นที่กรอบโดยไม่บิดเบี้ยว */
+}
+
+.menu-image2 {
+    width: 100%;                    /* กำหนดให้ภาพมีความกว้างเต็มกรอบ */
+    height: 260px;                  /* กำหนดความสูงของภาพ */
+    border-radius: 10px;
+    margin-right: 10px;             /* เพิ่มช่องว่างระหว่างรูปและข้อความ
+    object-fit: cover;              /* ให้ภาพครอบคลุมพื้นที่กรอบโดยไม่บิดเบี้ยว */
+}
+
+.menu-item h3, 
+.menu-item h6, 
+.menu-item p {
+    line-height: 0.8; /* ปรับระยะบรรทัดให้ชิด */
+}
+
+h3 {
+    font-size: 1.2em;               /* ขนาดตัวอักษร */
+    margin: 10px auto;          /* ระยะห่างด้านบนและล่างของข้อความ */
+    flex-grow: 1;                   /* ให้ข้อความขยายออกและเติมพื้นที่ที่เหลือ */
+    display: flex;
+    justify-content: center;        /* จัดข้อความให้อยู่ตรงกลาง */
+    align-items: center;
+}
+
+p {
+    white-space: nowrap;  /* ทำให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.5em; /* ขนาดฟอนต์ที่ต้องการ */
+    font-family: 'Prompt', 'SofiaLight'; /* กำหนดฟอนต์*/
+    bottom: 0; /* ตำแหน่งด้านล่างสุด */
+    width: 100%; /* ให้ footer ขยายเต็มความกว้าง */
+    word-wrap: break-word; /* ช่วยแบ่งคำ */
+    overflow-wrap: break-word; /* เพิ่มความปลอดภัย */
+  }
+
+footer p {
+    white-space: normal; /* อนุญาตให้ขึ้นบรรทัดใหม่ */
+    }
+
+
+  .slider {
+    position: relative;
+    width: 80%;
+    max-width: 1500px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn::before {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-btn.prev::before {
+    content: "‹";
+}
+
+.nav-btn.next::before {
+    content: "›";
+}
+
+
+.grid {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-item {
+        width: 350px;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .menu-item {
+        width: 80%;
+        height: 90%;
+    }
+
+    .menu-image {
+        width: 90%;
+        height: 70%;
+    }
+}
