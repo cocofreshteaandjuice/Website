@@ -7,7 +7,7 @@ body {
     background-color: #f0dfdf;
     font-family: 'SofiaLight', 'Prompt', 'sans-serif';
     align-items: center; /* จัดแนวในแนวตั้งให้ตรงกลาง */
-    background-image: url('./images/bg.jpg'); /* ใส่ URL ของรูปภาพ */
+    background-image: url('./images/bg.jpeg'); /* ใส่ URL ของรูปภาพ */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
